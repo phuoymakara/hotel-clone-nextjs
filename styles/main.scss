@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#bg-img{
+  background-image: url('../public/s1.avif');
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Set the interval to change the background image every 5 seconds */
+  animation: change-background 30s infinite;
+  //position: relative;
+
+}
+
+
+@keyframes change-background {
+  0% {
+    background-image: url("../public/s5.jpg");
+  }
+  25% {
+    background-image: url("../public/s6.jpg");
+  }
+  50% {
+    background-image: url("../public/s7.jpg");
+  }
+  75% {
+    background-image: url("../public/s5.jpg");
+  }
+  100% {
+    background-image: url("../public/s6.jpg");
+  }
+}
+
+
+#menu_id{
+  color: white !important ;
+  background-color: white;
+}
+
+.room-child{
+  transition: opacity 5s 5s;
+}
+
+.room-box:hover > .room-child{
+  //transition: opacity 0.5s;
+  display: block;
+  transition-timing-function: linear;
+}
